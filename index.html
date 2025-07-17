@@ -1,1 +1,63 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Removal Fee Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Amazon Removal Fee Calculator</h1>
+        <form id="fee-form">
+            <table id="items-table">
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Shipping Weight (lb)</th>
+                        <th>Quantity</th>
+                        <th>Fee Per Unit</th>
+                        <th>Subtotal Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Item rows will be added here dynamically -->
+                </tbody>
+            </table>
+            <button type="button" id="add-row">Add Item</button>
+            <button type="submit">Calculate</button>
+        </form>
+        <div id="total-fee"></div>
+        <div id="fee-schedule">
+            <h2>Fee Schedule (Standard Size) - <span id="current-date"></span></h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Shipping Weight</th>
+                        <th>Removal Fee Per Unit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0 to 0.5 lb</td>
+                        <td>$1.04</td>
+                    </tr>
+                    <tr>
+                        <td>0.5+ to 1.0 lb</td>
+                        <td>$1.53</td>
+                    </tr>
+                    <tr>
+                        <td>1.0+ to 2.0 lb</td>
+                        <td>$2.27</td>
+                    </tr>
+                    <tr>
+                        <td>More than 2 lb</td>
+                        <td>$2.89 + $1.06/lb above 2 lb</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
